@@ -136,19 +136,21 @@ kubectl describe deployment backend-deployment -n todo-app
 
 ## ⚠️ Known Issues
 
-### Docker Build Challenges
-During development, encountered:
-- **WSL2 Network Issues**: Docker containers intermittently lost internet connectivity
-- **Build Timeouts**: Large `node_modules` caused slow builds
-- **Resolution**: Added `.dockerignore` files to exclude unnecessary files
+## ⚠️ Known Issues
 
-### Workarounds Implemented
-- Used requirements.txt for Python dependencies
-- Optimized Docker layer caching
-- Configured DNS settings in Docker Desktop
+### ✅ RESOLVED - Docker Build Success
+Initial challenges with WSL2/network connectivity were resolved through:
+- Fresh Docker Desktop installation with WSL2 integration
+- Complete cleanup of previous Docker instances
+- Proper .dockerignore files to optimize build performance
+
+**Current Status:** 
+- ✅ Both services build successfully
+- ✅ Containers run without errors
+- ✅ Network connectivity stable
+- ✅ Images: Frontend (1.12GB), Backend (763MB)
 
 ## 📦 Submission Contents
-
 This Phase 4 submission includes:
 - ✅ Complete Dockerfiles (frontend & backend)
 - ✅ docker-compose.yml for local testing
